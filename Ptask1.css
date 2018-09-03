@@ -1,0 +1,41 @@
+	#Colorpicker{
+			padding-left: 600px;
+		}
+
+
+		#HW{
+			padding-left: 600px;
+		}
+
+		#calc{
+			padding-left: 600px;
+
+		}
+
+		h2{
+			text-align: center;
+			color:white;
+		}
+
+		section{
+			border: 2px solid black;
+		}
+		p{
+			font-family: Arial;
+			font-size: 18px;
+			color:white;
+			text-align: center;
+
+		}
+		body{
+			background-image: url("images/03.jpg");
+		}
+
+		section{
+			background-image: url("images/01.jpg");
+		}
+
+		h1{
+			text-align: center;
+			color:white;
+		}

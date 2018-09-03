@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>step 1</title>
+	<h1>Java script background color change code</h1>
+	<link rel="stylesheet" type="text/css" href="Ptask1.css">
+
+</head>
+<body>
+<div id="Colorpicker">
+<div id="mytext" style="width:250px; height:150px; background:red;">
+</div></br>
+ <label for="Color"> color:</label>
+ <input type="color" name="color" id="mycolor" onchange="mychange()">
+
+ </div>
+</br>
+ <script>
+ 
+ 	function mychange(){
+	var y =document.getElementById("mytext");
+	var x =document.getElementById("mycolor").value;
+	y.style.backgroundColor = x;
+}
+ </script>
+ 
+ <section>
+ 	<p><h2>Learning the Java Script</h2></p>
+ 	<div align="center"><img src="images/screenshot1.png"></div>
+ 	<p >We declare all the visible content in &lt;body&gt; tag. ID "mytext" is created with width and height defined by user and default background to red.<br>
+ 	&lt;Label&gt; tag is used for refering any input type elements.In the above code we delacre input type as color and assign a ID and function "mychange()"</p>
+ 	<div align="center"><img src="images/screenshot2.png"></div>
+ 	<p >Java script Code are always written between &lt;script&gt;   &lt;/script&gt; tags. We create function mychange(), assign var x to div where the color should be changed and var y to get the user's range value by using doucment.getElementById(ID).<br>Use the Java script syntax to use the user's input value to desired div element.</p>
+
+ 
+ </section>
+ 
+
+
+</body>
+</html>

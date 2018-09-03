@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Step 3</title>
+	<h1>Java script Add & Sub code</h1>
+	<link rel="stylesheet" type="text/css" href="Ptask1.css">
+</head>
+<body>
+<div id="calc">
+<input type="radio" name="plus"  checked id="toPlus"  onclick="plusClick()"> Plus<br>
+	<input type="radio" name="minus"  id="toMinus" onclick="minusClick()"> Minus<br></br>
+	<input id="inputData" type="number"/>
+	<button type="button" onclick="toCalculation()">total</button></br></br>
+	<input id="result" value="0" />
+	</div>
+
+
+	<script>
+		function plusClick(){
+			document.getElementById("toPlus").checked = true;
+			document.getElementById("toMinus").checked = false;
+		}
+		function minusClick(){
+			document.getElementById("toPlus").checked = false;
+			document.getElementById("toMinus").checked = true;
+		}
+	
+		function toCalculation() {
+			var dataInput = 0;
+			var dataResult = 0;
+			var newResult = 0;
+				dataInput = document.getElementById("inputData").value;
+				dataResult = document.getElementById("result").value;
+				if(dataResult == "undefined"){
+					dataResult = 0;
+				}
+			if (document.getElementById("toPlus").checked){
+				newResult = (parseInt(dataInput,10) + parseInt(dataResult,10));
+			} else{
+				newResult = (parseInt(dataResult,10) - parseInt(dataInput,10));
+			}
+			document.getElementById("result").innerHTML = newResult ;
+			document.getElementById("result").value	= newResult;		
+		}
+
+	</script>
+	</br>
+	<section>
+	<p><h2>Learning the Java Script</h2></p>
+	<div align="center"><img src="images/screenshot5.png"></div>
+	<p>We declare all the visible content in &lt;body&gt; tag. ID "toplus" and "tominus" is created with two radio button for the user to choose add or subtract.<br>Input box is created for the user to input number using &lt;input type="number" &gt.Button type is used to create button, function "tocalculation" is assigned to the button.</p>
+	<div align="center"><img src="images/screenshot6.png"></div>
+	<p>Java script Code are always written between &lt;script&gt;   &lt;/script&gt; tags.Function "plusclick()" and "minusclick()" are created which are set to true if users checks 1 check box other check box is automatically set to false.</p>
+	<div align="center"><img src="images/screenshot7.png"></div>
+	<p>Function "toCalculation()" is used, 3 variable dataInput, dataResult, newResult are assigned 0 value. var dataInput is assigned to get the value from ID("inputData") using JS syntax document.getElementById("inputdata"). Var dataResult is assigned to get the value from ID("result").</p>
+	<div align="center"><img src="images/screenshot8.png"></div>
+	<p>Using if-else statement we check if user checked ID("toplus") then add number to var newResult else the user input number is subtracted from the var newResult.<br>
+	The calculated value which stored in var newResult is displayed using document.getElementById("result").</p>
+
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Step 2</title>
+	<h1>Java script height & width change code</h1>
+	<link rel="stylesheet" type="text/css" href="Ptask1.css">
+</head>
+<body>
+<div id="HW">
+<div id="mytext" style="width:250px; height:150px; background:red;">Change height & width</div></br>
+<label for="range">range of width:</label>
+ <input type="range" min="200" max="450" id="myrange1" value="10" oninput="random()"><br/>
+ <label for="range">range of height</label>
+ <input type="range" min="100" max="300" id="myrange"  value="10" oninput="random1()">
+ </div></br>
+
+ <section>
+<p><h2>Learning the Java Script</h2></p>
+<div align="center"><img src="images/screenshot3.png"></div>
+<p>We declare all the visible content in &lt;body&gt; tag. ID "myrange1" and ID "myrange" is created with min and max range defined by user and default value to "10".<br>&lt;Label&gt; tag is used for refering any input type elements.In the above code we delacre input type as range and assign a onchange event and function "random()"</p>
+<div align="center"><img src="images/screenshot4.png"></div>
+<p>Java script Code are always written between &lt;script&gt;   &lt;/script&gt; tags. We create function random() and random1(), assign var x to div where the height and widht should be changed and var y to get the user's range value by using doucment.getElementById(ID).<br>Use the Java script syntax to use the user's input value to desired div element.</p>
+
+ 
+ </section>
+
+ <script>
+function random(){
+	var y = document.getElementById("mytext");
+	var x = document.getElementById("myrange1").value;
+	y.style.width = x +"px";
+}	
+function random1(){
+	var y = document.getElementById("mytext");
+	var x = document.getElementById("myrange").value;
+	y.style.height = x +"px";
+}	
+</script>
+
+</body>
+</html>
